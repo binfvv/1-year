@@ -1,6 +1,6 @@
 // Di chuyển sang ô tiếp theo khi nhập
 function nextInput(currentInput, index) {
-  if (currentInput.value.length === 1 && index < 3) {
+  if (currentInput.value.length === 1 && index < 5) {
     document.querySelectorAll('.code')[index + 1].focus();
   }
 }
@@ -25,7 +25,7 @@ function checkPassword() {
     code += input.value;
   });
 
-  const correctCode = "0208";
+  const correctCode = "282024";
 
   if (code === correctCode) {
     window.location.href = "main.html";
