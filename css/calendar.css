@@ -75,7 +75,7 @@ h1 {
   position: absolute;
   top: 20px;
   left: 20px;
-  background-color: #bcd86e; /* xanh lá nhẹ */
+  background-color: #bcd86e;
   color: white;
   padding: 8px 14px;
   border-radius: 12px;
@@ -90,10 +90,67 @@ h1 {
   background-color: #89c403;
 }
 
-/* 👇 Style cho trái tim nhảy */
 #love-heart {
   font-size: 48px;
   margin-top: 5px;
   display: inline-block;
   color: #f44336;
 }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.popup-content {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.popup video {
+  height: 100%;              /* ✅ Ưu tiên chiều cao */
+  width: auto;               /* ✅ Chiều rộng tự động theo tỉ lệ */
+  object-fit: contain;       /* ✅ Không cắt khung hình */
+  background-color: black;   /* ✅ Thêm nền đen tránh viền trắng */
+  border-radius: 10px;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  color: #e53935;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  line-height: 30px;
+  text-align: center;
+}
+

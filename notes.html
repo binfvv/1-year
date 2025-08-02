@@ -7,13 +7,14 @@
   <link rel="stylesheet" href="css/note.css" />
 </head>
 <body>
+  <header>
+    <h1>Love Notes</h1>
+  </header>
 
   <a href="main.html" class="back-button">← Quay lại</a>
 
-  <div class="envelope-container" onclick="openPopup()">
-    <div class="envelope" aria-label="Bao thư tình yêu">
-      <div class="flap"></div>
-    </div>
+  <div class="envelope-container" onclick="handleClick(event)">
+    <img src="images/baothu-Photoroom.png" alt="Bao thư tình yêu" class="envelope-img" />
     <p class="click-hint">Nhấn vào bao thư để mở thư nhé!</p>
   </div>
 
@@ -39,6 +40,7 @@
       </p>
     </div>
   </div>
+  <audio id="bgMusic" src="music/dongmien.mp3" preload="auto" loop></audio>
 
   <script src="js/note.js"></script>
 </body>

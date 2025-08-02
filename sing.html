@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sing</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff0f5;
+    }
+
+    .heart-button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      font-size: 80px;
+      color: #e91e63;
+      transition: transform 0.2s ease;
+    }
+
+    .heart-button:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+  <button class="heart-button" onclick="playMusic()">❤️</button>
+  <audio id="bgMusic" src="music/dongmien.mp3" preload="auto" loop></audio>
+
+  <script>
+    function playMusic() {
+      const audio = document.getElementById("bgMusic");
+      audio.play();
+    }
+  </script>
+
+</body>
+</html>

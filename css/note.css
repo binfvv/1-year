@@ -1,16 +1,27 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #d4edda, #a8e6cf);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #e0ffe0, #d0f5d0);
   text-align: center;
   padding: 40px 20px;
   margin: 0;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  overflow-x: hidden;
   color: #2e7d32;
   position: relative;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 40px 0;
+  z-index: 999;
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #45ac33;
 }
 
 .back-button {
@@ -23,7 +34,7 @@ body {
   color: #fff;
   padding: 8px 14px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
   user-select: none;
   z-index: 1001;
@@ -33,79 +44,76 @@ body {
 }
 
 .envelope-container {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 320px;
-  height: 210px;
+  height: auto;
   cursor: pointer;
-  perspective: 800px;
-  margin-bottom: 20px;
   z-index: 1;
 }
 
-.envelope {
-  width: 300px;
-  height: 200px;
-  background: #a5d6a7;
-  border-radius: 16px;
-  box-shadow:
-    inset 0 4px 6px rgba(255,255,255,0.6),
-    0 8px 15px rgba(0,0,0,0.2);
-  position: relative;
-  user-select: none;
+.envelope-img {
+  width: 250px;
   transition: transform 0.3s ease;
 }
-
-.envelope:hover {
-  transform: scale(1.05);
-  box-shadow:
-    inset 0 6px 8px rgba(255,255,255,0.8),
-    0 12px 25px rgba(0,0,0,0.3);
+.envelope-img:hover {
+  transform: scale(1.1);
 }
 
-.envelope .flap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0; 
-  height: 0;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
-  border-bottom: 100px solid #81c784;
-  border-radius: 16px 16px 0 0;
-  box-shadow: inset 0 5px 10px rgba(255,255,255,0.5);
+.click-hint {
+  color: #388e3c;
+  font-style: italic;
+  font-size: 15px;
+  user-select: none;
+  animation: blink 1.5s infinite;
+  margin-top: 10px;
+  z-index: 10;
+  position: relative;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
 }
 
 /* Popup overlay */
 .overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
-
-/* Hiện popup */
 .overlay.active {
   display: flex;
 }
 
-/* Popup letter */
 .popup-letter {
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
   color: #2e7d32;
   padding: 30px 35px;
-  max-width: 500px; /* mở rộng chiều ngang */
+  max-width: 500px;
   max-height: 80vh;
   overflow-y: auto;
   font-size: 18px;
   line-height: 1.8;
   position: relative;
   user-select: text;
-  animation: popupFadeIn 1.2s ease; /* giảm tốc độ hiện thư */
+  animation: popupFadeIn 1.2s ease;
 }
 
 @keyframes popupFadeIn {
@@ -119,7 +127,6 @@ body {
   }
 }
 
-/* Close button */
 .close-btn {
   position: absolute;
   top: 12px;
@@ -139,20 +146,4 @@ body {
 }
 .close-btn:hover {
   background: #388e3c;
-}
-
-.click-hint {
-  color: #388e3c;
-  font-style: italic;
-  font-size: 15px;
-  user-select: none;
-  animation: blink 1.5s infinite;
-  margin-top: 10px;
-  z-index: 10;
-  position: relative;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
 }
