@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ghép Hình Kỷ Niệm</title>
+  <link rel="stylesheet" href="/css/puzzle.css">
+</head>
+<body>
+  <a class="back-button" href="/main.html">⬅ Quay lại</a>
+  <h1>Minigame Ghép Hình</h1>
+  <p class="subtitle">Gắn kết yêu thương qua từng mảnh ghép 💚</p>
+
+  <div class="puzzle-wrapper">
+    <div class="left-panel">
+      <div id="puzzle-board"></div>
+      <p id="status"></p>
+    </div>
+    <div class="right-panel">
+      <img src="images/vuong.jpg" alt="Ảnh hoàn chỉnh" class="complete-img">
+    </div>
+  </div>
+
+  <script src="/js/puzzle.js"></script>
+  <!-- Popup chúc mừng -->
+<div id="win-popup" class="popup-overlay" style="display: none;">
+  <div class="popup-content">
+    <p>Chúc mừng! Em đã ghép xong bức hình 💞</p>
+    <button onclick="closeWinPopup()">Yêu anh 💖</button>
+  </div>
+</div>
+
+</body>
+</html>

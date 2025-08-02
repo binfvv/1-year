@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #e0fce3, #b4f0be);
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  color: #2d572c;
+}
+
+.container {
+  padding: 30px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #2d572c;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #3a7c39;
+}
+
+.photo-frame img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  margin: 20px auto;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1.1em;
+  margin: 20px 0;
+}
+
+.timer div {
+  background-color: #f0fff0;
+  padding: 10px;
+  border-radius: 12px;
+  width: 80px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timer span {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+.timer label {
+  font-size: 0.8em;
+  color: #3e7542;
+}
+
+.footer {
+  margin-top: 25px;
+  font-size: 1em;
+  color: #1f4032;
+}
+
+.heart {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #bcd86e; /* xanh lá nhẹ */
+  color: white;
+  padding: 8px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #89c403;
+}
+
+/* 👇 Style cho trái tim nhảy */
+#love-heart {
+  font-size: 48px;
+  margin-top: 5px;
+  display: inline-block;
+  color: #f44336;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lá thư cho em</title>
+  <link rel="stylesheet" href="/css/note.css" />
+</head>
+<body>
+
+  <a href="main.html" class="back-button">← Quay lại</a>
+
+  <div class="envelope-container" onclick="openPopup()">
+    <div class="envelope" aria-label="Bao thư tình yêu">
+      <div class="flap"></div>
+    </div>
+    <p class="click-hint">Nhấn vào bao thư để mở thư nhé!</p>
+  </div>
+
+  <!-- Popup overlay + letter -->
+  <div class="overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <div class="popup-letter">
+      <button class="close-btn" aria-label="Đóng thư" onclick="closePopup()">&times;</button>
+      <h2 id="popupTitle" style="margin-top:0; color:#388e3c;">Lá thư dành cho em 💌</h2>
+      <p>
+        Gửi em, người anh yêu thương nhất 💚<br><br>
+        Anh muốn nói với em rằng mỗi ngày bên em là một món quà quý giá đối với anh.  
+        Dù cuộc sống có đôi lúc bộn bề, nhưng chỉ cần nhìn thấy nụ cười của em, mọi mệt mỏi đều tan biến.  
+        Em là nguồn động lực, là bến bờ bình yên trong tâm hồn anh.<br><br>
+
+        Anh nhớ những kỷ niệm chúng ta đã cùng nhau trải qua, từ những buổi chiều ngồi bên nhau trò chuyện, đến những lần tay trong tay đi dưới cơn mưa nhẹ, tất cả đều in đậm trong trái tim anh.  
+        Anh hứa sẽ luôn bên em, che chở và yêu thương em bằng cả trái tim này.<br><br>
+
+        Dù cho tương lai có ra sao, thì anh tin rằng chỉ cần có em, anh sẽ có đủ sức mạnh để vượt qua tất cả.  
+        Hãy cùng anh viết tiếp câu chuyện tình yêu đẹp này nhé, em yêu!<br><br>
+
+        Với tất cả yêu thương và trân trọng,<br>
+        Người luôn nhớ đến em ❤️
+      </p>
+    </div>
+  </div>
+
+  <script src="/js/note.js"></script>
+</body>
+</html>

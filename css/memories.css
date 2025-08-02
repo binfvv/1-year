@@ -1,0 +1,94 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0fff4;
+  color: #333;
+}
+
+.container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #89c403;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #4CAF50;
+  margin-top: 60px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Vùng hiển thị ảnh và nút điều hướng */
+.photo-area {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Bao quanh ảnh */
+.image-wrapper {
+  max-width: 90%;
+  max-height: 70vh;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 12px;
+}
+
+
+/* Ảnh giữ nguyên kích thước thật */
+#mainImage {
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 70vh;
+  border-radius: 12px;
+  user-select: none;
+}
+
+/* Nút điều hướng */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-btn {
+  background-color: #bcd86e;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #89c403;
+}

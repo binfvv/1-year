@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Love Journey</title>
+  <link rel="stylesheet" href="/css/calendar.css" />
+</head>
+<body>
+  <div class="container">
+    <a href="main.html" class="back-button">← Back</a>
+    <h1>Our Love Journey</h1>
+    <p class="subtitle">Chúng ta đã bên nhau bao lâu rồi?</p>
+   <div class="animated-heart" id="love-heart">💗</div>
+    <div class="photo-frame">
+      <img src="/images/inlove.jpg" alt="Our Photo" />
+    </div>
+    <p class="footer">We're been in love for...<br><span class="heart">❤️ love u 3000 mi ❤️</span></p>
+    <div class="timer">
+    <div><span id="years">00</span><label>Years</label></div>
+      <div><span id="months">00</span><label>Months</label></div>
+      <div><span id="weeks">00</span><label>Weeks</label></div>
+      <div><span id="days">00</span><label>Days</label></div>
+      <div><span id="hours">00</span><label>Hours</label></div>
+      <div><span id="minutes">00</span><label>Minutes</label></div>
+      <div><span id="seconds">00</span><label>Seconds</label></div>
+    </div>
+    
+  </div>
+
+  <script>
+  const startDate = new Date("2024-08-02T00:00:00");
+
+  function updateTimer() {
+    const now = new Date();
+
+    let years = now.getFullYear() - startDate.getFullYear();
+    let months = now.getMonth() - startDate.getMonth();
+    let days = now.getDate() - startDate.getDate();
+    let hours = now.getHours() - startDate.getHours();
+    let minutes = now.getMinutes() - startDate.getMinutes();
+    let seconds = now.getSeconds() - startDate.getSeconds();
+
+    if (seconds < 0) {
+      seconds += 60;
+      minutes--;
+    }
+    if (minutes < 0) {
+      minutes += 60;
+      hours--;
+    }
+    if (hours < 0) {
+      hours += 24;
+      days--;
+    }
+    if (days < 0) {
+      const prevMonthDays = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+      days += prevMonthDays;
+      months--;
+    }
+    if (months < 0) {
+      months += 12;
+      years--;
+    }
+
+    // Tính số tuần và số ngày còn lại sau khi tách tuần
+    const totalDays = days;
+    const weeks = Math.floor(totalDays / 7);
+    const remainingDays = totalDays % 7;
+
+    document.getElementById("years").textContent = years.toString().padStart(2, '0');
+    document.getElementById("months").textContent = months.toString().padStart(2, '0');
+    document.getElementById("weeks").textContent = weeks.toString().padStart(2, '0');
+    document.getElementById("days").textContent = remainingDays.toString().padStart(2, '0');
+    document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+    document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+    document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+  }
+
+  setInterval(updateTimer, 1000);
+  updateTimer();
+</script>
+<script>
+  const heart = document.getElementById("love-heart");
+
+  function addHeartbeatEffect() {
+    heart.animate([
+      { transform: 'scale(1)' },
+      { transform: 'scale(1.3)' },
+      { transform: 'scale(1.1)' },
+      { transform: 'scale(1.4)' },
+      { transform: 'scale(1)' }
+    ], {
+      duration: 1200,
+      iterations: Infinity
+    });
+  }
+
+  addHeartbeatEffect();
+</script>
+
+</body>
+</html>

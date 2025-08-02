@@ -1,0 +1,60 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to bottom, #e0ffe0, #d0f5d0); /* xanh lá nhạt */
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #2e7d32; /* xanh đậm hơn chút */
+  margin-bottom: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #f0fff0; /* nền trong ô - xanh rất nhạt */
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  border-color: #a5d6a7; /* màu viền xanh nhạt khi hover */
+}
+
+.card img {
+   width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card:hover img {
+  transform: scale(1.05); /* 👈 nhẹ nhàng phóng to khi hover */
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  color: #2e7d32; /* đồng bộ màu xanh */
+}
+
+.card p {
+  color: #4d774e;
+  font-size: 14px;
+}
