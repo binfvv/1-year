@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background: #e7ffe7;
   text-align: center;
   padding-top: 70px;
@@ -49,11 +49,11 @@ h1 {
 .puzzle-piece {
   width: 120px;
   height: 120px;
-  background-image: url('/images/vuong.jpg'); /* đảm bảo đúng đường dẫn */
+  background-image: url("../images/vuong.jpg"); /* đảm bảo đúng đường dẫn */
   background-size: 360px 360px;
   background-repeat: no-repeat;
-  border: 2px solid #4CAF50;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border: 2px solid #4caf50;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   cursor: move;
   box-sizing: border-box;
 }
